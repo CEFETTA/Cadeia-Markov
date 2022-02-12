@@ -38,7 +38,7 @@ print(f'\nProbabilidades daqui {dia} dias será:')
 
 print(probs)
 
-prever_dia = np.matmul(probs, estados[dia_atual])
+prever_dia = np.matmul(np.transpose(probs), estados[dia_atual])
 
 print(f'\nProbabilidade de fazer sol será de {prever_dia[0]}')
 print(f'Probabilidade de chover será de {prever_dia[1]}')
